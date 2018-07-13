@@ -50,12 +50,3 @@ def make_dict():
 	for key, value in ips_dict.items():
 		new_dict.append({'country':key, 'count':value[0], 'ips':value[1:]})
 	return new_dict
-
-def run_list_ip():
-	''' make it run through all functions, and return a list '''
-	file = input('File Path: ')
-	ips = list_of_ips(file)
-	places = add_position(ips)
-	country = list_country(places)
-	return country
-
